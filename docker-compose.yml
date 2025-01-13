@@ -22,9 +22,9 @@ services:
     networks:
       - mdm_network
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_USER: mdm
       POSTGRES_DB: MDM-System
-      POSTGRES_PASSWORD: admin
+      POSTGRES_PASSWORD: mdm
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

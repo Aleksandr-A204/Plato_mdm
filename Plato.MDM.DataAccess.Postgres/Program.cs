@@ -33,4 +33,4 @@ using (var scope = app.Services.CreateScope())
 using (var ctx = scope.ServiceProvider.GetRequiredService<MdmDbContext>())
     await ctx.Database.MigrateAsync();
 
-app.Run();
+    app.Run();

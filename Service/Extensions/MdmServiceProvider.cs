@@ -4,7 +4,7 @@ namespace Plato.MDM.Extensions
 {
     public static class MdmServiceProvider
     {
-        private static string grpcUrl = "http://localhost:5087";
+        private static string grpcUrl = "http://mdm-data:5087";
 
         public static void AddMdmService(this IServiceCollection services)
         {

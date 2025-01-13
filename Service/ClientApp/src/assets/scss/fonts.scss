@@ -1,0 +1,56 @@
+//SFPro
+////////////////////////////////////////////////////////////////////////////////////////
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../fonts/SFPro/SFProDisplay-Medium.eot');
+  src: local('SF Pro Display Medium'), local('../fonts/SFPro/SFProDisplay-Medium'), url('../fonts/SFPro/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/SFPro/SFProDisplay-Medium.woff2') format('woff2'), url('../fonts/SFPro/SFProDisplay-Medium.woff') format('woff'), url('../fonts/SFPro/SFProDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../fonts/SFPro/SFProDisplay-Heavy.eot');
+  src: local('SF Pro Display Heavy'), local('../fonts/SFPro/SFProDisplay-Heavy'), url('../fonts/SFPro/SFProDisplay-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/SFPro/SFProDisplay-Heavy.woff2') format('woff2'), url('../fonts/SFPro/SFProDisplay-Heavy.woff') format('woff'), url('../fonts/SFPro/SFProDisplay-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../fonts/SFPro/SFProDisplay-Thin.eot');
+  src: local('SF Pro Display Thin'), local('../fonts/SFPro/SFProDisplay-Thin'), url('../fonts/SFPro/SFProDisplay-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/SFPro/SFProDisplay-Thin.woff2') format('woff2'), url('../fonts/SFPro/SFProDisplay-Thin.woff') format('woff'), url('../fonts/SFPro/SFProDisplay-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../fonts/SFPro/SFProDisplay-Light.eot');
+  src: local('SF Pro Display Light'), local('../fonts/SFPro/SFProDisplay-Light'), url('../fonts/SFPro/SFProDisplay-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/SFPro/SFProDisplay-Light.woff2') format('woff2'), url('../fonts/SFPro/SFProDisplay-Light.woff') format('woff'), url('../fonts/SFPro/SFProDisplay-Light.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../fonts/SFPro/SFProDisplay-Black.eot');
+  src: local('SF Pro Display Black'), local('../fonts/SFPro/SFProDisplay-Black'), url('../fonts/SFPro/SFProDisplay-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/SFPro/SFProDisplay-Black.woff2') format('woff2'), url('../fonts/SFPro/SFProDisplay-Black.woff') format('woff'), url('../fonts/SFPro/SFProDisplay-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../fonts/SFPro/SFProDisplay-Ultralight.eot');
+  src: local('SF Pro Display Ultralight'), local('../fonts/SFPro/SFProDisplay-Ultralight'), url('../fonts/SFPro/SFProDisplay-Ultralight.eot?#iefix') format('embedded-opentype'), url('../fonts/SFPro/SFProDisplay-Ultralight.woff2') format('woff2'), url('../fonts/SFPro/SFProDisplay-Ultralight.woff') format('woff'), url('../fonts/SFPro/SFProDisplay-Ultralight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// Font Awesome
+@import '../fonts/FontAwesome/scss/fontawesome.scss';
+$fa-font-path: "../fonts/FontAwesome/webfonts";
+@import '../fonts/FontAwesome/scss/solid.scss';
+@import '../fonts/FontAwesome/scss/regular.scss';

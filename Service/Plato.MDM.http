@@ -1,0 +1,6 @@
+@Plato.MDM_HostAddress = http://localhost:5231
+
+GET {{Plato.MDM_HostAddress}}/mdmdirectory/
+Accept: application/json
+
+###

@@ -1,0 +1,105 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Plato.MDM.DataAccess.Postgres.Protos";
+
+service DirectoryService{
+	rpc GetDirectories(GetDirectoriesRequest) returns (GetDirectoriesResponse);
+	rpc CreateDirectory(CreateDirectoryRequest) returns (MessageResponse);
+	rpc UpdateDirectory(UpdateDirectoryRequest) returns (MessageResponse);
+	rpc DeleteDirectory(IdRequest) returns (MessageResponse);
+}
+
+service DirectoryVersionService{
+	rpc GetVersionsByDirectory(IdRequest) returns (ListVersionByDirectoryResponse);
+	rpc CreateDirectoryVersion(VersionByDirectoryReply) returns (MessageResponse);
+	rpc UpdateDirectoryVersion(VersionByDirectoryReply) returns (MessageResponse);
+	rpc DeleteDirectoryVersion(IdRequest) returns (MessageResponse);
+}
+
+service DirectoryLevelService{
+	rpc GetDirectoryLevels(GetDirectoryLevelsRequest) returns (ListItemResponse);
+}
+
+service DirectoryDomainService{
+	rpc GetDirectoryDomains(GetDirectoryDomainsRequest) returns (ListItemResponse);
+}
+
+service DirectoryDataService{
+	rpc GetDirectoryData(IdRequest) returns (DirectoryDataResponse);
+	rpc CreateDirectoryData(ItemReply) returns (MessageResponse);
+	rpc UpdateDirectoryData(DataRequest) returns (MessageResponse);
+	rpc DeleteDirectoryData(DataRequest) returns (MessageResponse);
+}
+
+message GetDirectoriesRequest
+{}
+
+message GetDirectoryLevelsRequest
+{}
+
+message GetDirectoryDomainsRequest
+{}
+
+message GetDirectoriesResponse {
+  repeated DirectoryReply directories = 1;
+}
+
+message ListItemResponse {
+	repeated ItemReply items = 1;
+}
+
+message ListVersionByDirectoryResponse {
+	repeated VersionByDirectoryReply directoryVersions = 1;
+}
+
+message CreateDirectoryRequest{
+	DirectoryReply directory = 1;
+}
+
+message UpdateDirectoryRequest{
+	DirectoryReply directory = 1;
+}
+
+message DirectoryReply{
+	string id = 1;
+	string name = 2;
+	string description = 3;
+	string directoryDomainId = 4;
+	string directoryLevelId = 5;
+}
+
+message VersionByDirectoryReply{
+    string id = 1;
+    string directoryId = 2;
+    string dataSourceName = 3;
+    string dataSourceDate = 4;
+    string dataSourceUrl = 5;
+    string version = 6;
+    string versionDate = 7;
+    string versionDescription = 8;
+    string tableName = 9;
+}
+
+message ItemReply{
+	string id = 1;
+	string name = 2;
+}
+
+message IdRequest{
+	string id = 1;
+}
+
+message MessageResponse{
+	string message = 1;
+	bool success = 2;
+}
+
+message DirectoryDataResponse {
+  string tableName = 1;
+  string mainTable = 2;
+  map<string, string> foreignTables = 3;
+}
+
+message DataRequest {
+	  string stringJson = 1;
+}

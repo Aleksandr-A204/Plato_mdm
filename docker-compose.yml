@@ -1,0 +1,36 @@
+services:
+  mdm:
+    image: nexus.infolan.org/plato/plato-mdm:1.0.0
+    build: ./Service
+    ports:
+      - 8081:8080
+    networks:
+      - mdm_network
+
+  mdm-data:
+    image: nexus.infolan.org/plato/plato-mdm-data:1.0.0
+    build: ./Plato.MDM.DataAccess.Postgres
+    ports:
+      - 5087:5087
+    networks:
+      - mdm_network
+
+  postgres:
+    image: nexus.infolan.org/plato/plato-postgres:2.2.16
+    ports:
+      - 9095:5432
+    networks:
+      - mdm_network
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: MDM-System
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  mdm_network:
+    driver: bridge
+
+volumes:
+  postgres_data: {}
